@@ -321,7 +321,17 @@
         <img src="Hoa.png" class="intro-img" />
         <h2 class="intro-text">💐 Chạm nhẹ vào bông hoa 💐</h2>
     </div>
-
+    <audio id="music" src="hay.mp3" loop></audio>
+        <script>
+  // Chờ người dùng tương tác 1 lần để được phép play
+            function enablePlay() {
+            const audio = document.getElementById("music");
+            audio.play();
+    // Sau khi play thành công thì không cần nghe sự kiện click nữa
+            window.removeEventListener("click", enablePlay);
+            }
+            window.addEventListener("click", enablePlay);
+        </script>
     <div id="mainCard" style="display: none;">
         <div class="card">
             <div class="header">
@@ -339,6 +349,12 @@
                 <img class="slide" src="IMG_1543.jpg" alt="Kỷ niệm 3">
                 <img class="slide" src="IMG_1544.PNG" alt="Kỷ niệm 3">
                 <img class="slide" src="IMG_1545.PNG" alt="Kỷ niệm 3">
+                <img class="slide" src="da26b2722790c2dc4903273165414a24.JPEG" alt="Kỷ niệm 3">
+                <img class="slide" src="IMG_1546.PNG" alt="Kỷ niệm 3">
+                <img class="slide" src="IMG_1547.PNG" alt="Kỷ niệm 3">
+                <img class="slide" src="IMG_1548.PNG" alt="Kỷ niệm 3">
+                <img class="slide" src="IMG_1551.PNG" alt="Kỷ niệm 3">
+                <img class="slide" src="IMG_1552.PNG" alt="Kỷ niệm 3">
             </div>
             <div class="message-box">
                 <div id="message"></div>
@@ -380,10 +396,11 @@
         /* Sử Lời nhắn ở đây */
         const messages = [
             "Nhân 20-11 chúc bây luôn vui vẻ, hạnh phúc 🌻",
-            "Luôn thuận lợi trên mỗi bước đi của mình ✨",
             "Chúc Thảo sớm tìm được bạn trai ưng ý 💐",
             "Chúc Phôn sẽ có thật nhiều tiền để bao nhóm đi ăn 💐",
-            "HẾT!"
+            "Luôn thuận lợi trên mỗi bước đi của mình ✨",
+            "Luôn là chính mình 💐",
+            "JUST DO IT !!"
         ];
         let msgIndex = 0;
         let charIndex = 0;
